@@ -9,7 +9,7 @@ $(function () {
     $('.slick-prev').text('<');
 
 
-    
+
     $('.choose__red').on('mouseenter', function() {
         $('.choose__red').text('CHOOSE LIFE!!!');
     });
@@ -27,4 +27,6 @@ $(function () {
 new WOW().init();
     
 });
+
+
 
