@@ -1,0 +1,266 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+    padding: 15px 0;
+    background-color: #ababab;
+    min-height: 15vh;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__menu {
+        &-item {
+            display: inline;
+            a {
+                color: #1761a0;
+                font-family: "Inconsolata", monospace;
+                font-size: 18px;
+                font-weight: 900;
+            }
+            & + li {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    overflow-x: hidden;
+    &__item {
+        height: 85vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-text {
+            @include f700;
+            color: #ffffff;
+            position: absolute;
+            left: 50px;
+            bottom: 200px;
+            max-width: 350px;
+            font-size: 30px;
+        }
+    }
+    .slick-next.slick-arrow,
+    .slick-prev.slick-arrow {
+        position: absolute;
+        background-color: rgba($blue, 0.4);
+        transition: all 0.3s;
+        z-index: 1;
+        height: 100%;
+        max-width: calc(((100vw - 1170px) / 2));
+        border: none;
+        width: 100%;
+        @include f900;
+        color: $green;
+        font-size: 100px;
+        padding: 0;
+        margin: 0;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: $blue;
+        }
+    }
+    .slick-next.slick-arrow {
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+    }
+    .slick-prev.slick-arrow {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        li {
+            margin: 0 10px;
+            button {
+                font-size: 0;
+                background-color: $text;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 1px solid #000000;
+                transition: all 0.8s;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &.slick-active {
+                button {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+.banner {
+    &__header {
+        text-align: center;
+        margin: 0;
+        padding: 40px 10px;
+        color: $green;
+        @include f900;
+        font-size: 50px;
+        padding: 0;
+    }
+    &__inner {
+        background-color: $blue;
+        padding: 25px 0;
+    }
+    &__subtitle {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: #840000;
+    }
+}
+
+.profiles {
+    &__item {
+        padding: 15px 10px;
+        background-color: rgba(black, 0.3);
+        border-bottom: 2px solid $blue;
+        &:last-child{
+            border-bottom: none;
+        }
+        &:nth-child(even){
+            .profiles__item-inner{
+                    flex-direction: row-reverse;
+            }
+            .profiles__item-btn{
+                left: 10px;
+                right: auto;
+            }
+        }
+        &-title {
+            @include f500;
+            font-size: 25px;
+            text-align: center;
+        }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-descr {
+            padding: 10px;
+            position: relative;
+            &--text {
+                @include f400;
+                color: $text;
+            }
+        }
+        &-btn {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            background-color: $blue;
+            padding: 10px 10px;
+            @include f500;
+            font-size: 20px;
+            color: $green;
+        }
+        &-info {
+            text-align: center;
+        }
+        &-connect {
+            padding-left: 15px;
+            font-size: 14px;
+            position: relative;
+            @include f700;
+            color: #000000;
+            line-height: 14px;
+            margin: 0 auto;
+            width: fit-content;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #bb0000;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &.online {
+                &::before {
+                    background-color: $green;
+                }
+            }
+        }
+        &-status {
+            background-color: $blue;
+            display: inline-block;
+            color: $green;
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 10px;
+            @include f900;
+            margin-bottom: 5px;
+        }
+        &-date {
+            font-size: 13px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 0 5px;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+    }
+}
+.choose{
+    &__inner{
+        display: flex;
+    }
+    &__half{
+        width: 50%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        @include f700;
+        font-size: 45px;
+        color: #ffffff;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__red{
+        background-color: rgba(#bb0000, 0.5);
+        &:hover{
+            background-color: rgba(#bb0000, 1)
+        }
+    }
+    &__blue{
+        background-color: rgba($blue, 0.5);
+        &:hover{
+            background-color: rgba($blue, 1)
+        }
+    }
+    
+}
+
+@import "media";
