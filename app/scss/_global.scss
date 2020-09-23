@@ -11,6 +11,8 @@ body{
     font-family: 'Inconsolata', monospace;
     color: $text;
     font-size: 16px;
+    overflow-x: hidden;
+    background-color: #0f231e;
 }
 .container{
     max-width: 1200px;

@@ -5,7 +5,7 @@
 
 .header {
     padding: 15px 0;
-    background-color: #ababab;
+    background-color: #B2B2B2;
     min-height: 15vh;
     &__inner {
         display: flex;
@@ -111,19 +111,20 @@
             margin: 0 10px;
             button {
                 font-size: 0;
-                background-color: $text;
+                background-color: $blue;
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
                 border: 1px solid #000000;
-                transition: all 0.8s;
+                transition: all 0.3s;
                 &:focus {
                     outline: none;
                 }
             }
             &.slick-active {
                 button {
-                    background-color: #fff;
+                    background-color: $green;
+                    border: 5px solid #000000;
                 }
             }
         }
@@ -150,14 +151,14 @@
         text-align: center;
         padding: 0;
         margin: 0;
-        color: #840000;
+        color: $red;
     }
 }
 
 .profiles {
     &__item {
         padding: 15px 10px;
-        background-color: rgba(black, 0.3);
+        background-color: #B2B2B2;
         border-bottom: 2px solid $blue;
         &:last-child{
             border-bottom: none;
@@ -196,7 +197,11 @@
             padding: 10px 10px;
             @include f500;
             font-size: 20px;
-            color: $green;
+            color: $red;
+            transition: all 0.3s;
+            &:hover{
+                color: $green;
+            }
         }
         &-info {
             text-align: center;
@@ -269,9 +274,9 @@
         }
     }
     &__red{
-        background-color: rgba(#bb0000, 0.5);
+        background-color: rgba($green, 0.5);
         &:hover{
-            background-color: rgba(#bb0000, 1)
+            background-color: rgba($green, 1)
         }
     }
     &__blue{
