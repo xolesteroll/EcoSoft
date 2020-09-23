@@ -111,6 +111,9 @@
             }
         }
     }
+    .slick-slide> div{
+        display: flex;
+    }
 }
 .banner {
     &__header {
