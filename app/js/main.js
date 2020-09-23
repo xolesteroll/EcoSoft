@@ -5,8 +5,8 @@ $(function () {
         fade: true,
         autoplay: true
     });
-    $('.slick-next').text('');
-    $('.slick-prev').text('');
+    $('.slick-next').text('>');
+    $('.slick-prev').text('<');
 
     $('.choose__red').on('mouseenter', function() {
         $('.choose__red').text('REEEEEEED');
