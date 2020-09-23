@@ -4,9 +4,13 @@
 @import "global";
 
 .header {
-    padding: 15px 0;
     background-color: #B2B2B2;
     min-height: 15vh;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    top: 0;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -54,6 +58,7 @@
 .slider {
     position: relative;
     overflow-x: hidden;
+    margin-top: 104px;
     &__item {
         height: 85vh;
         background-position: center center;
@@ -106,7 +111,7 @@
         display: flex;
         justify-content: center;
         position: absolute;
-        bottom: 15px;
+        bottom: 45px;
         left: 0;
         right: 0;
         li {
@@ -119,6 +124,7 @@
                 border-radius: 50%;
                 border: 1px solid #000000;
                 transition: all 0.3s;
+                opacity: 0.6;
                 &:focus {
                     outline: none;
                 }
@@ -127,12 +133,17 @@
                 button {
                     background-color: $green;
                     border: 5px solid #000000;
+                    opacity: 1;
                 }
             }
         }
     }
     .slick-slide> div{
         display: flex;
+    }
+    .slick-initialized .slick-slide{
+        border-left: 4px solid $green;
+        border-right: 4px solid $green;
     }
 }
 .banner {
@@ -201,9 +212,10 @@
             @include f500;
             font-size: 20px;
             color: $red;
-            transition: all 0.3s;
+            transition: all 0.5s;
             &:hover{
                 color: $green;
+                border-radius: 50%;
             }
         }
         &-info {
@@ -211,6 +223,7 @@
         }
         &-connect {
             padding-left: 15px;
+            padding-right: 6px;
             font-size: 14px;
             position: relative;
             @include f700;
@@ -218,6 +231,7 @@
             line-height: 14px;
             margin: 0 auto;
             width: fit-content;
+            background-color: #fff;
             &::before {
                 content: "";
                 position: absolute;
@@ -225,7 +239,7 @@
                 height: 10px;
                 border-radius: 50%;
                 background-color: #bb0000;
-                left: 0;
+                left: 2px;
                 top: 50%;
                 transform: translateY(-50%);
             }
@@ -239,7 +253,7 @@
             background-color: $blue;
             display: inline-block;
             color: $green;
-            padding: 5px;
+            padding: 3px 5px;
             border-radius: 15px;
             font-size: 10px;
             @include f900;
@@ -263,7 +277,7 @@
     }
     &__half{
         width: 50%;
-        min-height: 100vh;
+        min-height: calc(100vh - 104px);
         display: flex;
         justify-content: center;
         align-items: center;

@@ -8,6 +8,8 @@ $(function () {
     $('.slick-next').text('>');
     $('.slick-prev').text('<');
 
+
+    
     $('.choose__red').on('mouseenter', function() {
         $('.choose__red').text('CHOOSE LIFE!!!');
     });
@@ -20,6 +22,7 @@ $(function () {
     $('.choose__blue').on('mouseleave', function() {
         $('.choose__blue').text('Choose Blue!!!');
     });
+
     
 new WOW().init();
     
