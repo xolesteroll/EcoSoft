@@ -63,10 +63,12 @@
             @include f700;
             color: #ffffff;
             position: absolute;
+            padding: 15px;
             left: 50px;
             bottom: 200px;
             max-width: 350px;
             font-size: 30px;
+            background-color: rgba(black, 0.4);
         }
     }
     .slick-next.slick-arrow,
@@ -187,6 +189,7 @@
             &--text {
                 @include f400;
                 color: $text;
+                margin-bottom: 50px;
             }
         }
         &-btn {
@@ -194,7 +197,7 @@
             bottom: 0;
             right: 10px;
             background-color: $blue;
-            padding: 10px 10px;
+            padding: 10px 30px;
             @include f500;
             font-size: 20px;
             color: $red;
@@ -244,7 +247,7 @@
         }
         &-date {
             font-size: 13px;
-            background-color: #000000;
+            background-color: rgba(#000000, 0.5);
             color: #ffffff;
             padding: 0 5px;
             display: block;
