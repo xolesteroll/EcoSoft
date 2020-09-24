@@ -5,7 +5,7 @@
 
 .header {
     background-color: #B2B2B2;
-    min-height: 15vh;
+    min-height: 11vh;
     position: fixed;
     z-index: 50;
     left: 0;
@@ -60,7 +60,7 @@
     overflow-x: hidden;
     margin-top: 104px;
     &__item {
-        height: 85vh;
+        height: 89vh;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -100,7 +100,7 @@
     }
     .slick-next.slick-arrow {
         top: 0;
-        right: 0;
+        right: 1px;
         transform: translateX(100%);
     }
     .slick-prev.slick-arrow {
@@ -189,6 +189,7 @@
             @include f500;
             font-size: 25px;
             text-align: center;
+            padding: 15px 0;
         }
         &-inner {
             display: flex;
@@ -215,7 +216,7 @@
             transition: all 0.5s;
             &:hover{
                 color: $green;
-                border-radius: 50%;
+                border-radius: 5px;
                 transform: scale(1.1, 1.1);
             }
         }

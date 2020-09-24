@@ -5,8 +5,28 @@ $(function () {
         fade: true,
         autoplay: true
     });
+
+
     $('.slick-next').text('>');
     $('.slick-prev').text('<');
+
+    $('.slick-next').on('mouseenter', function() {
+        $(this).text('');
+        $('.slider .slick-initialized .slick-slide').css('border-right-color', '#1761A0');
+    });
+    $('.slick-prev').on('mouseenter', function() {
+        $(this).text('');
+        $('.slider .slick-initialized .slick-slide').css('border-left-color', '#1761A0');
+
+    });
+    $('.slick-next').on('mouseleave', function() {
+        $(this).text('>');
+        $('.slider .slick-initialized .slick-slide').css('border-right', '');
+    });
+    $('.slick-prev').on('mouseleave', function() {
+        $(this).text('<');
+        $('.slider .slick-initialized .slick-slide').css('border-left', '');
+    });
 
 
 
@@ -23,8 +43,9 @@ $(function () {
         $('.choose__blue').text('Choose Blue!!!');
     });
 
-    
-new WOW().init();
+    $('.profiles__item-connect.offline').text('OFFLINE');
+
+    new WOW().init();
     
 });
 
