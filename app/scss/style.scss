@@ -4,7 +4,7 @@
 @import "global";
 
 .header {
-    background-color: #B2B2B2;
+    background-color: #b2b2b2;
     min-height: 11vh;
     position: fixed;
     z-index: 50;
@@ -27,7 +27,7 @@
             display: inline;
             padding: 10px 0;
             position: relative;
-            &::before{
+            &::before {
                 content: "";
                 position: absolute;
                 bottom: 0;
@@ -36,9 +36,9 @@
                 height: 4px;
                 background-color: $green;
                 transition: all 0.5s;
-            }    
-            &:hover{
-                &::before{
+            }
+            &:hover {
+                &::before {
                     width: 100%;
                 }
             }
@@ -138,10 +138,10 @@
             }
         }
     }
-    .slick-slide> div{
+    .slick-slide > div {
         display: flex;
     }
-    .slick-initialized .slick-slide{
+    .slick-initialized .slick-slide {
         border-left: 4px solid $green;
         border-right: 4px solid $green;
     }
@@ -171,16 +171,16 @@
 .profiles {
     &__item {
         padding: 15px 10px;
-        background-color: #B2B2B2;
+        background-color: #b2b2b2;
         border-bottom: 2px solid $blue;
-        &:last-child{
+        &:last-child {
             border-bottom: none;
         }
-        &:nth-child(even){
-            .profiles__item-inner{
-                    flex-direction: row-reverse;
+        &:nth-child(even) {
+            .profiles__item-inner {
+                flex-direction: row-reverse;
             }
-            .profiles__item-btn{
+            .profiles__item-btn {
                 left: 10px;
                 right: auto;
             }
@@ -214,7 +214,7 @@
             font-size: 20px;
             color: $red;
             transition: all 0.5s;
-            &:hover{
+            &:hover {
                 color: $green;
                 border-radius: 5px;
                 transform: scale(1.1, 1.1);
@@ -273,11 +273,11 @@
         }
     }
 }
-.choose{
-    &__inner{
+.choose {
+    &__inner {
         display: flex;
     }
-    &__half{
+    &__half {
         width: 50%;
         min-height: calc(100vh - 104px);
         display: flex;
@@ -288,23 +288,83 @@
         @include f700;
         font-size: 45px;
         color: #ffffff;
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }
-    &__red{
+    &__red {
         background-color: rgba($green, 0.5);
-        &:hover{
-            background-color: rgba($green, 1)
+        &:hover {
+            background-color: rgba($green, 1);
         }
     }
-    &__blue{
+    &__blue {
         background-color: rgba($blue, 0.5);
-        &:hover{
-            background-color: rgba($blue, 1)
+        &:hover {
+            background-color: rgba($blue, 1);
         }
     }
-    
+}
+.modal {
+    background-color: rgba(#000000, 0.8);
+    height: 85vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    &__inner {
+        background-color: #b2b2b2;
+        position: absolute;
+        padding: 25px 40px;
+        border: 3px solid $blue;
+        text-align: center;
+        max-width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__title {
+        @include f700;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 25px;
+    }
+    &__topic {
+        display: flex;
+        justify-content: space-between;
+        max-width: 275px;
+        margin: 0 auto;
+        color: $blue;
+        @include f700;
+        span {
+            @include f500;
+            font-size: 20px;
+            color: $green;
+        }
+    }
+    &__img {
+        margin-bottom: 10px;
+    }
+    &__btn {
+        background-color: $blue;
+        padding: 10px 30px;
+        @include f500;
+        font-size: 20px;
+        color: $red;
+        transition: all 0.5s;
+        border: none;
+        &:hover {
+            color: $green;
+            border-radius: 5px;
+            transform: scale(1.1, 1.1);
+        }
+        &:focus{
+            outline: none;
+        }
+    }
 }
 
 @import "media";

@@ -45,9 +45,14 @@ $(function () {
 
     $('.profiles__item-connect.offline').text('OFFLINE');
 
+    
+
     new WOW().init();
     
 });
+
+
+
 
 
 
