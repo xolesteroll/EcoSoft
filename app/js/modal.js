@@ -4,11 +4,12 @@ const btns = document.querySelectorAll('.profiles__item-btn'),
     modalInner = document.querySelector('.modal__inner');
     
 
+
+    
 function closeModal(elem) {
     elem.classList.remove('show');
     elem.classList.add('hide');
     document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = "15px";
 }
 function openModal(elem) {
     elem.addEventListener('click', (e) => {
