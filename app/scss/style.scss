@@ -7,10 +7,8 @@
     background-color: #b2b2b2;
     box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.4);
     min-height: 11vh;
-    position: fixed;
-    z-index: 50;
-    left: 0;
-    right: 0;
+    position: sticky;
+    z-index: 1000;
     top: 0;
     &__inner {
         display: flex;
@@ -33,7 +31,8 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 0;
+                width: 0px;
+                opacity: 0;
                 height: 4px;
                 background-color: $green;
                 transition: all 0.5s;
@@ -41,6 +40,7 @@
             &:hover {
                 &::before {
                     width: 100%;
+                    opacity: 1;
                 }
             }
             a {
@@ -59,7 +59,6 @@
 .slider {
     position: relative;
     overflow-x: hidden;
-    margin-top: 104px;
     &__item {
         height: 89vh;
         background-position: center center;
@@ -281,7 +280,7 @@
     }
     &__half {
         width: 50%;
-        min-height: calc(100vh - 104px);
+        min-height: 89vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -337,15 +336,17 @@
     }
     &__topic {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         max-width: 275px;
         margin: 0 auto;
-        color: $blue;
+        color: $green;
         @include f700;
         span {
             @include f500;
             font-size: 20px;
-            color: $green;
+            color: $blue;
+            padding-bottom: 5px;
         }
     }
     &__img {
