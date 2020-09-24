@@ -5,6 +5,7 @@
 
 .header {
     background-color: #b2b2b2;
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.4);
     min-height: 11vh;
     position: fixed;
     z-index: 50;
@@ -49,7 +50,7 @@
                 font-weight: 900;
             }
             & + li {
-                margin-left: 15px;
+                margin-left: 25px;
             }
         }
     }
@@ -147,6 +148,7 @@
     }
 }
 .banner {
+    
     &__header {
         text-align: center;
         margin: 0;
@@ -225,7 +227,7 @@
         }
         &-connect {
             padding-left: 15px;
-            padding-right: 6px;
+            padding-right: 3px;
             font-size: 14px;
             position: relative;
             @include f700;
@@ -315,6 +317,7 @@
     height: 100%;
     width: 100%;
     text-align: center;
+    transition: all 5s;
     &__inner {
         background-color: #b2b2b2;
         position: absolute;
@@ -329,7 +332,7 @@
     &__title {
         @include f700;
         font-size: 20px;
-        color: #000000;
+        color: $red;
         margin-bottom: 25px;
     }
     &__topic {

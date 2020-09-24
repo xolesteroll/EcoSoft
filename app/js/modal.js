@@ -1,20 +1,21 @@
 const btns = document.querySelectorAll('.profiles__item-btn'),
     modal = document.querySelector('.modal'),
     modalCloseBtn = document.querySelector('.modal__btn'),
-    modalInner = document.querySelector('.modal__inner'),
-    profiles = document.querySelectorAll('.profiles__item');
+    modalInner = document.querySelector('.modal__inner');
+    
 
 function closeModal(elem) {
     elem.classList.remove('show');
     elem.classList.add('hide');
-    document.querySelector('body').style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+    document.body.style.paddingRight = "15px";
 }
 function openModal(elem) {
     elem.addEventListener('click', (e) => {
         e.preventDefault();
         modal.classList.remove('hide');
         modal.classList.add('show');
-        document.querySelector('body').style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
     });
 }
 
@@ -43,22 +44,6 @@ function modalInteract() {
 }
 modalInteract();
 
-function oddMove() {
-    profiles.forEach((profile, i) => {
-        if (i % 2 == 0) {
-            profile.classList.add('wow', 'animate__fadeInLeft');
-            profile.setAttribute('data-wow-offset', '200');
-            profile.setAttribute('data-wow-duration', '1s');
-
-        } else {
-            profile.classList.add('wow', 'animate__fadeInRight');
-            profile.setAttribute('data-wow-offset', '200');
-            profile.setAttribute('data-wow-duration', '1s');
-        }
-
-    });
-}
-oddMove();
 
 
 
