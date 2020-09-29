@@ -135,7 +135,7 @@
                             <div class="profiles__item-date">
                                 29.09.1988
                             </div>
-                            <div class="profiles__item-connect online">
+                            <div class="profiles__item-connect offline">
                                 ONLINE
                             </div>
                             
@@ -238,11 +238,70 @@
 
     <section class="choose">
         <div class="choose__inner">
-            <div class="choose__red choose__half wow animate__bounceInLeft" data-wow-offset="300" data-wow-duration="2s">
+           <a href="#green" style="width: 50%;"><div class="choose__red choose__half wow animate__bounceInLeft" data-wow-offset="300" data-wow-duration="2s" style="width: 100%;">
                 Choose Green!!!
-            </div>
-            <div class="choose__blue choose__half wow animate__bounceInRight" data-wow-offset="300" data-wow-duration="2s">
+            </div></a> 
+            <a href="#blue" style="width: 50%;"><div class="choose__blue choose__half wow animate__bounceInRight" data-wow-offset="300" data-wow-duration="2s" style="width: 100%;">
                 Choose Blue!!!
+            </div></a>
+        </div>
+    </section>
+
+    <section id="green" class="green">
+        <div class="container">
+            <div class="green__title">
+               <div class="green__title-green">Green Is</div>  
+               <div class="green__title-white">New White</div>
+            </div>
+            <div class="green__descr">
+                You are indifferent and glorious if you are here, you choose the plan of help our world, how to heal it, you choose your weapon to fight the unforgivable waste of resources and actions which are uglyfying our planet. And we Love You for IT! Keep it ON!!!
+            </div>
+            <div class="green__inner">
+                <form class="green__form">
+                    <div class="green__form-container">
+                      <label for="name">Your Name</label>
+                      <input type="text" name="name" placeholder="Name...">
+                      </div>
+                      <div class="green__form-container">
+                      <label for="surname">Your Surname</label>
+                      <input type="text" name="surname" placeholder="Surname...">
+                      </div>
+                      <div class="green__form-container">
+                      <label for="birth">Date of birth</label>
+                      <input type="text" name="birth" placeholder="Date of birth...">
+                      </div>
+                      <div class="green__form-container">
+                      <label for="profession">Your Profession</label>
+                      <input type="text" name="profession" placeholder="Profession...">
+                    </div>
+                      <div class="green__form-container">
+                      <label for="help">How can you Help</label>
+                      <input type="text" name="help" placeholder="Your Help...">
+                      </div>
+                      <div class="green__form-container">
+                      <label for="timeperday">How much time per day you can invest</label>
+                      <input type="range" name="timeperday" min="0" max="10" step="1" list="tickmarks" placeholder="Surname...">
+                      <datalist id="tickmarks">
+                        <option value="0" label="0%">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5" label="50%">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10" label="100%">
+                      </datalist>
+                    </div>
+                      <div class="green__form-container green__textarea-container">
+                      <label for="words">Your words to Say:</label>
+                      <textarea name="words" id="" cols="30" rows="10" placeholder="How Can You Help???" 
+                      style="resize: none;"></textarea>
+                    </div>
+                      <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </section>
@@ -290,6 +349,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/profiles.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>
