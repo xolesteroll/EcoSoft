@@ -4,12 +4,13 @@
 @import "global";
 
 .header {
-    background-color: #b2b2b2;
+    background-color: $greybg;
     box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.4);
     min-height: 11vh;
     position: sticky;
     z-index: 1000;
     top: 0;
+    transition: all 1s;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -132,7 +133,7 @@
             &.slick-active {
                 button {
                     background-color: $green;
-                    border: 5px solid #000000;
+                    border: 5px solid $red;
                     opacity: 1;
                 }
             }
@@ -167,12 +168,49 @@
         margin: 0;
         color: $red;
     }
+    &__info{
+        background-color: $greybg;
+        border: 5px solid $blue;
+        border-bottom: 5px solid #ffffff;
+        padding-bottom: 15px;
+        &-text{
+            color: #ffffff;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 15px;
+        }
+        &-list{
+            text-align: center;
+        }
+        &-item{
+            color: $green;
+            font-size: 25px;
+            border-bottom: 5px dotted $blue;
+            width: fit-content;
+            margin: 0 auto;
+            padding-left: 20px;
+            position: relative;
+            & + li{
+                margin-top: 15px;
+            }
+            &::before{
+                content: "♫";
+                font-size: 20px;
+                color: $red;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+    }
 }
 
 .profiles {
     &__item {
         padding: 15px 10px;
-        background-color: #b2b2b2;
+        background-color: $greybg;
         border-bottom: 5px solid #ffffff;
         &:last-child {
             border-bottom: none;
@@ -318,7 +356,7 @@
     text-align: center;
     transition: all 5s;
     &__inner {
-        background-color: #b2b2b2;
+        background-color: $greybg;
         position: absolute;
         padding: 25px 40px;
         border: 3px solid $blue;
@@ -407,14 +445,14 @@
         font-size: 25px;
         font-weight: 50;
         color: #ffffff;
-        padding: 20px 40px;
+        padding: 20px 75px;
         text-align: center;
-        background-color: #b2b2b2;
+        background-color: $greybg;
         border-bottom: 5px solid #ffffff;
     }
     &__form{
         padding: 20px 15px;
-        background-color: #b2b2b2;
+        background-color: $greybg;
 
         &-container{
             display: flex;
@@ -433,6 +471,9 @@
             }
             &:focus{
                 outline: none;
+            }
+            &[type="range"]{
+                padding: 0;
             }
         }
         textarea{
@@ -477,5 +518,22 @@
         }
     }
 }
-
+.values{
+    display: flex;
+    justify-content: space-between;
+    position: absolute; 
+    max-width: 570px;
+    width: 100%;
+    bottom: -15px;
+    right: 0;
+    padding-left: 3px;
+    span{
+        color: $red;
+        @include f700;
+    }
+}
+.next{
+    min-height: 100vh;
+     
+}
 @import "media";
