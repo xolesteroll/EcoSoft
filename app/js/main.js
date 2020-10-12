@@ -31,16 +31,21 @@ $(function () {
 
 
     $('.choose__red').on('mouseenter', function() {
-        $('.choose__red').text('CHOOSE LIFE!!!');
+        $(this).text('CHOOSE LIFE!!!');
+        $(this).css({'background-image': 'url(images/gifs/woods.gif)', 'background-color': 'transparent'});
     });
     $('.choose__red').on('mouseleave', function() {
-        $('.choose__red').text('Choose Green!!!');
+        $(this).text('Choose Green!!!');
+        $(this).css({'background-image': 'none', 'background-color': 'rgba(65,154,28,0.5)'});
     });
     $('.choose__blue').on('mouseenter', function() {
         $('.choose__blue').text('CHOOSE SKY!!!');
+        $(this).css({'background-image': 'url(images/gifs/sky.gif)', 'background-color': 'transparent'});
+
     });
     $('.choose__blue').on('mouseleave', function() {
         $('.choose__blue').text('Choose Blue!!!');
+        $(this).css({'background-image': 'none', 'background-color': 'rgba(23,97,160,0.5)'});
     });
 
     $('.profiles__item-connect.offline').text('OFFLINE');

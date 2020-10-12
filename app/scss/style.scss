@@ -333,12 +333,18 @@
     }
     &__red {
         background-color: rgba($green, 0.5);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         &:hover {
             background-color: rgba($green, 1);
         }
     }
     &__blue {
         background-color: rgba($blue, 0.5);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         &:hover {
             background-color: rgba($blue, 1);
         }
