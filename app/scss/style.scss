@@ -331,11 +331,12 @@
             opacity: 1;
         }
     }
-    &__red {
+    &__green {
         background-color: rgba($green, 0.5);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        transition: all 1s;
         &:hover {
             background-color: rgba($green, 1);
         }

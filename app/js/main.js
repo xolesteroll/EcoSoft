@@ -30,11 +30,11 @@ $(function () {
 
 
 
-    $('.choose__red').on('mouseenter', function() {
+    $('.choose__green').on('mouseenter', function() {
         $(this).text('CHOOSE LIFE!!!');
         $(this).css({'background-image': 'url(images/gifs/woods.gif)', 'background-color': 'transparent'});
     });
-    $('.choose__red').on('mouseleave', function() {
+    $('.choose__green').on('mouseleave', function() {
         $(this).text('Choose Green!!!');
         $(this).css({'background-image': 'none', 'background-color': 'rgba(65,154,28,0.5)'});
     });
